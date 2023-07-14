@@ -43,12 +43,14 @@ fortune <- function(include_obscene = FALSE) {
 }
 
 .rot13 <- function(x) {
-  chartr("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
-         "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM",
-         x)
+    chartr(
+        "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM",
+        x
+    )
 }
 
-.replace_non_escaped <- function(string){
-  pattern <- "(?<!\\\\)[a-zA-Z]"
-  return(str_replace_all(string, pattern, function(x) .rot13(x)))
+.replace_non_escaped <- function(string) {
+    pattern <- "(?<!\\\\)[a-zA-Z]"
+    return(str_replace_all(string, pattern, function(x) .rot13(x)))
 }
