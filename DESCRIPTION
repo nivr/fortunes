@@ -1,6 +1,6 @@
 Package: fortunes
 Title: Unix Fortune
-Version: 2023.7.1
+Version: 2023.7.2
 Authors@R: 
     person("N", "vR", , "first.last@example.com", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
