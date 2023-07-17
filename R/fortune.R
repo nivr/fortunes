@@ -42,7 +42,7 @@ fortune <- function(include_obscene = FALSE) {
     if (endsWith(chosen_file, "-o")) {
         chosen_fortune <- .replace_non_escaped(chosen_fortune)
     }
-    cat(paste0(chosen_fortune, collapse = "\n"))
+    cat(paste0(chosen_fortune, "\n", collapse = "\n"))
     return(invisible())
 }
 
