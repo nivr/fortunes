@@ -20,10 +20,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-"""
 This license applies to the fortune source materials (the fortunes):
-
-"""
 
 Caldera
 240 West Center Street
@@ -91,5 +88,5 @@ Very truly yours,
 Bill Broderick
 Director, Licensing Services
 
-* UNIX is a registered trademark of The Open Group in the US and other
+UNIX is a registered trademark of The Open Group in the US and other
 countries.

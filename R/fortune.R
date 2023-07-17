@@ -13,8 +13,12 @@ fortune <- function(include_obscene = FALSE) {
         pattern <- ".*"
     }
 
+    fortunes_path <- system.file("fortunes",
+        package = "fortunes"
+    )
+
     fortune_files <- list.files(
-        path = "inst",
+        path = fortunes_path,
         pattern = pattern,
         recursive = FALSE,
         full.names = FALSE
@@ -22,7 +26,7 @@ fortune <- function(include_obscene = FALSE) {
 
     chosen_file <- sample(fortune_files, 1)
 
-    fortunes <- scan(paste("inst", chosen_file, sep = "/"),
+    fortunes <- scan(paste(fortunes_path, chosen_file, sep = "/"),
         what = "list",
         sep = "\n",
         quiet = TRUE,
@@ -52,5 +56,5 @@ fortune <- function(include_obscene = FALSE) {
 
 .replace_non_escaped <- function(string) {
     pattern <- "(?<!\\\\)[a-zA-Z]"
-    return(str_replace_all(string, pattern, function(x) .rot13(x)))
+    return(stringr::str_replace_all(string, pattern, function(x) .rot13(x)))
 }
